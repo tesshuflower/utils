@@ -10,6 +10,8 @@ if [ "$branch" == "" ]; then
     branch="main"
 fi
 
+echo branch is: $branch
+
 git checkout ${branch}
 if [ $? -ne 0 ]; then
     exit 1
