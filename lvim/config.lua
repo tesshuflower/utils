@@ -8,6 +8,8 @@
 lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
 
+vim.diagnostic.config({virtual_text = false})
+
 -- This config.lua originally taken from: https://github.com/LunarVim/starter.lvim/blob/go-ide/config.lua
 ------------------------
 -- Treesitter
@@ -17,11 +19,6 @@ lvim.builtin.treesitter.ensure_installed = {
   "gomod",
 }
 
-
-------------------------
--- Color Scheme
-------------------------
-lvim.colorscheme = "NeoSolarized"
 
 ------------------------
 -- Plugins
@@ -44,6 +41,13 @@ lvim.plugins = {
     build = function() vim.fn["mkdp#util#install"]() end,
   },
 }
+
+------------------------
+-- Color Scheme
+------------------------
+lvim.colorscheme = "NeoSolarized"
+
+
 
 ------------------------
 -- Formatting
