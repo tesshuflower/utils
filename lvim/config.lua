@@ -10,6 +10,14 @@ lvim.keys.normal_mode["gT"] = ":BufferLineCyclePrev<CR>"
 
 vim.diagnostic.config({virtual_text = false})
 
+-- Terminal stuff
+lvim.builtin.which_key.mappings["t"] = {
+  name = "+Terminal",
+  f = { "<cmd>ToggleTerm<cr>", "Floating terminal" },
+  v = { "<cmd>2ToggleTerm size=20 direction=vertical<cr>", "Split vertical" },
+  h = { "<cmd>2ToggleTerm size=20 direction=horizontal<cr>", "Split horizontal" },
+}
+
 -- This config.lua originally taken from: https://github.com/LunarVim/starter.lvim/blob/go-ide/config.lua
 ------------------------
 -- Treesitter
