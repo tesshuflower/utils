@@ -17,6 +17,14 @@ lvim.builtin.which_key.mappings["t"] = {
   v = { "<cmd>2ToggleTerm size=20 direction=vertical<cr>", "Split vertical" },
   h = { "<cmd>2ToggleTerm size=20 direction=horizontal<cr>", "Split horizontal" },
 }
+-- Markdown Preview
+lvim.builtin.which_key.mappings["m"] = {
+  name = "+MarkdownPreview",
+  p = { "<cmd>MarkdownPreview<cr>", "MarkdownPreview" },
+  s = { "<cmd>MarkdownPreviewStop<cr>", "MarkdownPreviewStop" },
+  t = { "<cmd>MarkdownPreviewToggle<cr>", "MarkdownPreviewToggle" },
+}
+
 
 -- This config.lua originally taken from: https://github.com/LunarVim/starter.lvim/blob/go-ide/config.lua
 ------------------------
