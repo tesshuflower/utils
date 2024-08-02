@@ -25,6 +25,21 @@ lvim.builtin.which_key.mappings["m"] = {
   t = { "<cmd>MarkdownPreviewToggle<cr>", "MarkdownPreviewToggle" },
 }
 
+-- Add diffview to git menu
+lvim.builtin.which_key.mappings["gD"] = {
+  name = "+Diffview",
+  d = { "<cmd>DiffviewOpen<cr>", "DiffviewOpen" },
+  m = { "<cmd>DiffviewOpen upstream/main<cr>", "DiffviewOpen upstream/main" },
+  c = { "<cmd>DiffviewClose<cr>", "DiffviewClose" },
+  r = { "<cmd>DiffviewRefresh<cr>", "DiffviewRefresh" },
+}
+
+-- nvim tree customizations
+lvim.builtin.nvimtree.setup.view = {
+  adaptive_size = true,
+}
+
+
 
 -- This config.lua originally taken from: https://github.com/LunarVim/starter.lvim/blob/go-ide/config.lua
 ------------------------
@@ -56,6 +71,7 @@ lvim.plugins = {
     ft = { "markdown" },
     build = function() vim.fn["mkdp#util#install"]() end,
   },
+  "sindrets/diffview.nvim",
 }
 
 ------------------------
