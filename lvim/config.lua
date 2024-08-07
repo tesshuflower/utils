@@ -72,6 +72,13 @@ lvim.plugins = {
     build = function() vim.fn["mkdp#util#install"]() end,
   },
   "sindrets/diffview.nvim",
+  {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
 }
 
 ------------------------
@@ -94,6 +101,7 @@ formatters.setup {
 lvim.format_on_save = {
   enabled = true,
   pattern = { "*.go" },
+  timeout = 5000
 }
 
 ------------------------
