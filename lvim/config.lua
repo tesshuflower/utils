@@ -29,6 +29,15 @@ lvim.builtin.which_key.mappings["m"] = {
   t = { "<cmd>MarkdownPreviewToggle<cr>", "MarkdownPreviewToggle" },
 }
 
+-- Add minimap to menu
+lvim.builtin.which_key.mappings["M"] = {
+  name = "+Minimap",
+  t = { "<cmd>MinimapToggle<cr>", "MinimapToggle" },
+  m = { "<cmd>Minimap<cr>", "Minimap" },
+  c = { "<cmd>MinimapClose<cr>", "MinimapClose" },
+  r = { "<cmd>MinimapRefresh<cr>", "MinimapRefresh" },
+}
+
 -- Add diffview to git menu
 lvim.builtin.which_key.mappings["gD"] = {
   name = "+Diffview",
@@ -81,6 +90,16 @@ lvim.plugins = {
     event = "BufRead",
     config = function()
       require("todo-comments").setup()
+    end,
+  },
+  {
+    'wfxr/minimap.vim',
+    build = "cargo install --locked code-minimap",
+    -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
+    init = function ()
+      vim.cmd ("let g:minimap_width = 10")
+      vim.cmd ("let g:minimap_auto_start = 1")
+      vim.cmd ("let g:minimap_auto_start_win_enter = 1")
     end,
   },
 }
