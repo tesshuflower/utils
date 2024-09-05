@@ -7,6 +7,10 @@
 
 -- General options
 vim.opt.colorcolumn = "120"
+-- folding/unfolding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99
 
 -- gt/gT to switch between tabs
 lvim.keys.normal_mode["gt"] = ":BufferLineCycleNext<CR>"
