@@ -56,6 +56,9 @@ lvim.builtin.nvimtree.setup.view = {
   adaptive_size = true,
 }
 
+-- disable autopairs
+lvim.builtin.autopairs.active = false
+
 
 
 -- This config.lua originally taken from: https://github.com/LunarVim/starter.lvim/blob/go-ide/config.lua
