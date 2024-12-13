@@ -56,6 +56,8 @@ lvim.builtin.nvimtree.setup.view = {
   adaptive_size = true,
 }
 
+lvim.builtin.nvimtree.setup.filters.custom = {}
+
 -- disable autopairs
 lvim.builtin.autopairs.active = false
 
@@ -134,7 +136,7 @@ formatters.setup {
 lvim.format_on_save = {
   enabled = true,
   pattern = { "*.go" },
-  timeout = 5000
+  timeout = 15000
 }
 
 ------------------------
