@@ -42,6 +42,13 @@ lvim.builtin.which_key.mappings["M"] = {
   r = { "<cmd>MinimapRefresh<cr>", "MinimapRefresh" },
 }
 
+-- Launch Mason
+lvim.builtin.which_key.mappings["n"] = {
+  "<cmd>Mason<CR>", "Mason (pkg mgr for LSP etc)"
+}
+
+
+
 -- Add diffview to git menu
 lvim.builtin.which_key.mappings["gD"] = {
   name = "+Diffview",
